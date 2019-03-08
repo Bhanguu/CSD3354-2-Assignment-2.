@@ -9,7 +9,18 @@ namespace C0730065_C0730323
     class Program
     {
         static void Main(string[] args)
+        { }
+                public delegate void MyDelegate();
+        void Method1()
         {
+            Console.WriteLine("Methods1");
+            Console.ReadLine();
+
+        }
+        public void Method2()
+        {
+            MyDelegate myDelegate = new MyDelegate(Method1);
+            myDelegate();
         }
     }
 }
